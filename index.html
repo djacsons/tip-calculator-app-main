@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="main.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <img src="images/logo.svg" alt="page logo" class="pageLogo">
+  <main>
+    <div class="mainChildLeft">
+      <div class="bill mainChildLeftChildren">
+        <p class="leftChildText">Bill</p>
+        <img src="images/icon-dollar.svg" alt="dollar icon" class="icons">
+        <input id="billArea" type="text" maxlength="10">
+      </div>
+      <div class="selectTip mainChildLeftChildren">
+        <p class="leftChildText">Select Tip %</p>
+        <div class="tipBtnsParent">
+          <button id="5" class="tipBtnsChild tipBtns">5%</button>
+          <button id="10" class="tipBtnsChild tipBtns">10%</button>
+          <button id="15" class="tipBtnsChild tipBtns">15%</button>
+          <button id="25" class="tipBtnsChild tipBtns">25%</button>
+          <button id="50" class="tipBtnsChild tipBtns">50%</button>
+          <input type="text" placeholder="Custom" id = "customTip" class="customTip tipBtnsChild activeBorder" maxlength="3">
+        </div>
+      </div>
+      <div class="numPeople mainChildLeftChildren">
+        <p class="leftChildText">Number of People</p>
+        <p class="peopleError">Can't be zero</p>
+        <img class="icons" src="images/icon-person.svg" alt="person icon">
+        <input id="peopleArea" type="text" maxlength="3">
+      </div>
+    </div>
+
+    <div class="mainChildRight">
+      <div class="tipView">
+        <div class="tipViewRow1 tipViewChildren">
+          <div class="tipViewText">Tip Amount
+            <br>
+            <p class="person">/ person</p></div>
+          <p class="bigText">$4.27</p>
+        </div>
+        <div class="tipViewRow2 tipViewChildren">
+          <div class="tipViewText">Total
+            <br>
+            <p class="person">/ person</p></div>
+          <p class="bigText">$32.79</p>
+        </div>
+      </div>
+      <button id = "resetBtn" class="resetBtn font">RESET</button>
+    </div>
+
+  </main>
+
+  <footer>
+    <br><br>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://www.frontendmentor.io/profile/djacsons">Djacson Stvil</a>.
+    </div>
+  </footer>
+  
+  <script src="main.js"></script>
+</body>
+</html>
