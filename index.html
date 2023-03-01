@@ -20,8 +20,11 @@
     <div class="mainChildLeft">
       <div class="bill mainChildLeftChildren">
         <p class="leftChildText">Bill</p>
-        <img src="images/icon-dollar.svg" alt="dollar icon" class="icons">
-        <input id="billArea" type="text" maxlength="10">
+        <div class="flex">
+          <img src="images/icon-dollar.svg" alt="dollar icon" class="icons">
+          <input id="billArea" type="text" maxlength="10">
+        </div>
+        
       </div>
       <div class="selectTip mainChildLeftChildren">
         <p class="leftChildText">Select Tip %</p>
@@ -35,22 +38,27 @@
         </div>
       </div>
       <div class="numPeople mainChildLeftChildren">
-        <p class="leftChildText">Number of People</p>
-        <p class="peopleError">Can't be zero</p>
+        <div class="flex numPeopleHeading"> 
+          <p class="leftChildText">Number of People</p>
+          <p class="peopleError">Can't be zero</p>
+        </div>
+       <div class="flex">
         <img class="icons" src="images/icon-person.svg" alt="person icon">
         <input id="peopleArea" type="text" maxlength="3">
+       </div>
+        
       </div>
     </div>
 
-    <div class="mainChildRight">
+    <div class="mainChildRight flex">
       <div class="tipView">
-        <div class="tipViewRow1 tipViewChildren">
+        <div class="tipViewRow1 flex">
           <div class="tipViewText">Tip Amount
             <br>
             <p class="person">/ person</p></div>
           <p class="bigText">$4.27</p>
         </div>
-        <div class="tipViewRow2 tipViewChildren">
+        <div class="tipViewRow2 flex">
           <div class="tipViewText">Total
             <br>
             <p class="person">/ person</p></div>

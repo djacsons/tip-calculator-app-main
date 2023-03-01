@@ -10,6 +10,11 @@ body{
     font-size: 24px;
     font-family: Space Mono;
 }
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 main{
     background-color: hsl(0, 0%, 100%);
     width: 60rem;
@@ -39,7 +44,6 @@ button{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
     padding: 3rem;
     padding-top: 3rem;
     padding-bottom: 1rem;
@@ -60,11 +64,6 @@ button{
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-row-gap: 2rem;
-}
-.tipViewChildren{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 .tipViewText{
     color: hsl(0, 0%, 100%);
@@ -110,10 +109,9 @@ input:focus{
 }
  .icons{
     z-index: 1;
-    position: fixed;
+    position: absolute;
     width: 1rem;
     margin-left: 1rem;
-    margin-top: 1.5rem;
 }
 .leftChildText{
     color:hsl(186, 14%, 43%);
@@ -123,7 +121,6 @@ input:focus{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    
 }
 .tipBtnsChild{
     width: 30%;
@@ -142,15 +139,10 @@ input:focus{
     width: 25%;
 }
 .peopleError{
-    z-index: 1;
-    position: fixed;
     color: rgb(255, 115, 65);
     visibility:hidden;
-    margin-left: 19rem;
-    margin-top: -1.5rem;
     font-size: 18px;
 }
-
  @media only screen and (max-width:600px){
     body{
         justify-content: space-around;
@@ -163,24 +155,26 @@ input:focus{
         grid-template-columns: 0;
         grid-template-rows: 1fr 1fr;
         grid-row-gap: 3rem;
-        width: 23rem;
-        height: 44rem;
+        width: 15rem;
+        height: 34rem;
         padding-bottom: 0;
         margin-top: 2rem;
         padding-left: 1rem;
         padding-right: 3rem;
     }
+    input{
+        height: 12%;
+    }
     .mainChildRight{
-        width: 21rem;
-        height: 15rem;
-        padding: 2rem;
-        padding-top: 1rem;
-        padding-bottom: 0;
-        margin-top: -3rem;
+        width: 15rem;
+        height: 10rem;
+        padding: 1rem;
+        margin-top: -9rem;
     }
     .mainChildLeft{
         width: 23rem;
         height: 25rem;
+        grid-row-gap: 0;
     }
     .mainChildLeftChildren{
         height: 5rem;
@@ -189,25 +183,32 @@ input:focus{
     }
     .bill{
         margin-top: -2rem;
+        width: 16rem;
+        height: 5rem;
+    }
+    .leftChildText{
+        font-size: 12px;
     }
     .selectTip{
         margin-top: -5rem;
-    }
-    .numPeople{
-        margin-top: 0rem;
-        width: 23rem;
-    }
-    .tipView{
-        grid-row-gap: 0rem;
-        height: 9rem;
-    }
-    .resetBtn{
-        height: 32%;
-        width: 100%;
+        width: 16rem;
+        height: 15%;
     }
     .customTip{
         width: 1rem;
         margin-right: 0rem;
+    }
+    .numPeople{
+        margin-top: -2rem;
+        width: 16rem;
+    }
+    .numPeopleHeading>*{
+        font-size: 10px;
+    }
+    .resetBtn{
+        height: 23%;
+        width: 100%;
+        margin-top: 1rem;
     }
     .customTip::placeholder{
         text-align: center;
@@ -215,12 +216,26 @@ input:focus{
     .customTip::-ms-input-placeholder{
         text-align: center;
     }
-    .peopleError{
-        width: 10rem;
-        margin-left: 15rem;
+    .tipViewRow1>*{
+        font-size: 30px;
+    }
+    .tipViewRow2>*{
+        font-size: 30px;
+    }
+    .tipView{
+        grid-row-gap: 0rem;
+        height: 6rem;
+    }
+    .tipViewRow1{
+        height: 5%;
+        margin-top: 1rem;
+    }
+    .tipViewText{
+        font-size: 12px;
     }
     .tipViewRow2{
-        margin-top: -1rem;
+        margin-top: 1rem;
+        height: 5%;
     }
     .tipBtnsChild{
         width: 90%;
@@ -228,6 +243,12 @@ input:focus{
     .tipBtnsParent{
         display: grid;
         grid-template-columns: 1fr 1fr;
-
+    }
+    .tipBtnsParent>*{
+        height: 2rem;
+    }
+    .icons{
+        margin-top: .5rem;
+        margin-left: .5rem;
     }
  }
